@@ -1,0 +1,23 @@
+PODS:
+  - lame (1.0.0)
+  - PinLayout (1.8.11)
+
+DEPENDENCIES:
+  - lame (from `../`)
+  - PinLayout
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PinLayout
+
+EXTERNAL SOURCES:
+  lame:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  lame: fb97c318daebf1269a235f077cd5aa466ae042cd
+  PinLayout: bbff13c7f635c55a7a10f6043867371c02df76a4
+
+PODFILE CHECKSUM: f4974c2d627d16d518c29e1aee1af309740a9405
+
+COCOAPODS: 1.7.5
