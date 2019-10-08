@@ -1,4 +1,4 @@
-# lame.framework
+# Lame framework for swift with bitcode
 
  LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.
 
@@ -8,9 +8,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-Swift >= 5
+- Swift >= 5
 
-iOS >= 5
+- iOS >= 11.0
+
+- Archs: `arm64`, `armv7s`, `x86_64`
 
 ## Installation
 
