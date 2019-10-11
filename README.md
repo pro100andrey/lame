@@ -1,4 +1,4 @@
-# Lame framework for swift with bitcode
+# Lame framework
 
  LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.
 
