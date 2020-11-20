@@ -1,11 +1,11 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '11.0'
+platform :ios, '13.0'
 
 target 'Example' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'lame', :path => '../'
-  pod 'PinLayout'
+  # Pods for Example
+  pod 'lame'
 
 end
