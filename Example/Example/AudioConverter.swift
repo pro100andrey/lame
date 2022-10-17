@@ -26,15 +26,17 @@ class AudioConverter {
             lame_set_out_samplerate(lame, 0)
             lame_set_brate(lame, 0)
             lame_set_quality(lame, 4)
-            lame_set_VBR(lame, vbr_default)
+            lame_set_VBR(lame, vbr_off)
             lame_init_params(lame)
+            
 
             let pcmFile: UnsafeMutablePointer<FILE> = fopen(inPcmPath, "rb")
             fseek(pcmFile, 0 , SEEK_END)
+            
             let fileSize = ftell(pcmFile)
             // Skip file header.
-            let fileHeader = 4 * 1024
-            fseek(pcmFile, fileHeader, SEEK_SET)
+            let pcmHeaderSize = 48 * 8
+            fseek(pcmFile, pcmHeaderSize, SEEK_SET)
 
             let mp3File: UnsafeMutablePointer<FILE> = fopen(outMp3Path, "wb")
 
@@ -58,7 +60,7 @@ class AudioConverter {
                 }
 
                 if read == 0 {
-                    write = lame_encode_flush(lame, mp3buffer, mp3Size)
+                    write = lame_encode_flush_nogap(lame, mp3buffer, mp3Size)
                 } else {
                     write = lame_encode_buffer_interleaved(lame, pcmbuffer, Int32(read), mp3buffer, mp3Size)
                 }
