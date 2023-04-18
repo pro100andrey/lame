@@ -1,4 +1,4 @@
-# Lame framework
+# Lame xcframework
 
  LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.
 
@@ -10,9 +10,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 - Swift >= 5
 
-- iOS >= 11.0
+- iOS >= 12.0
 
-- Archs: `arm64`, `armv7s`, `x86_64`
+- Archs: `arm64`,`x86_64`
 
 ## Installation
 
