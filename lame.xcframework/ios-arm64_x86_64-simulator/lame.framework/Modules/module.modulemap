@@ -1,4 +1,1 @@
-framework module lame {
-  header "lame.h"
-  export *
-}
+framework module lame { header "lame.h" export * }
