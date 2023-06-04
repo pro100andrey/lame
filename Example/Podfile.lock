@@ -1,16 +1,16 @@
 PODS:
-  - lame (1.0.1)
+  - lame (1.1.0)
 
 DEPENDENCIES:
-  - lame (= 1.0.1)
+  - lame (from `../`)
 
-SPEC REPOS:
-  trunk:
-    - lame
+EXTERNAL SOURCES:
+  lame:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  lame: fb4e1f1cd62e4f3b8d1b329dc328d213db153009
+  lame: 4761fc34a97c3c974df676c55647d6733574cf4d
 
-PODFILE CHECKSUM: 553b35377019d232f279f8a3e69325152a1a988e
+PODFILE CHECKSUM: a5ef6138a8ecdca2250f2f61dc0911b111496063
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.12.1
