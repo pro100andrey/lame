@@ -10,9 +10,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 - Swift >= 5
 
-- iOS >= 12.0
-
-- Archs: `arm64`,`x86_64`
+|  SDK        | Version    |
+|-------------|------------|
+| iOS         | 12.0       |
+| tvOS        | 12.0       |
+| macOS       | 10.14      |
+| Mac+Catalyst| 10.14      |
 
 ## Installation
 
