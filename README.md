@@ -15,7 +15,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 | iOS         | 12.0       |
 | tvOS        | 12.0       |
 | macOS       | 10.14      |
-| Mac+Catalyst| 10.14      |
+| MacCatalyst | 10.14      |
 
 ## Installation
 
