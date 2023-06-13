@@ -32,4 +32,4 @@ Andrey Ivanov, this.andrey@gmail.com
 
 ## License
 
-lame.framework is available under the MIT license. See the LICENSE file for more info.
+`Lame xcframework` is available under the MIT license. See the LICENSE file for more info.
