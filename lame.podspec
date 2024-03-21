@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'lame'
-  s.version          = '1.1.0'
+  s.version          = '1.2.0'
   s.summary          = 'Lame 3.100'
 
   s.description      = <<-DESC
@@ -23,7 +23,8 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '12.0'
   s.tvos.deployment_target = '12.0'
   s.osx.deployment_target = '10.14'
-  
+
   s.vendored_frameworks = 'lame.xcframework'
+  s.resource_bundles = { 'lame_apple_privacy' => ['PrivacyInfo.xcprivacy'] }
 
 end
