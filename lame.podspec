@@ -25,6 +25,6 @@ Pod::Spec.new do |s|
   s.osx.deployment_target = '10.14'
 
   s.vendored_frameworks = 'lame.xcframework'
-  s.resource_bundles = { 'lame_apple_privacy' => ['PrivacyInfo.xcprivacy'] }
+  s.resource_bundles = { 'apple_privacy' => ['PrivacyInfo.xcprivacy'] }
 
 end
