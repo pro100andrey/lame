@@ -23,8 +23,8 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 Through Xcode menu:
 
-1. File -> Swift Packages -> Add Package Dependency...
-2. Enter URL `https://github.com/pro100andrey/lame`
+1. Go to File -> Add Package Dependency.
+2. Enter the URL: https://github.com/pro100andrey/lame.
 
 ### CocoaPods
 
