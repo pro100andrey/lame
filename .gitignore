@@ -49,3 +49,5 @@ playground.xcworkspace
 .build/
 # Cocoapods
 Pods
+
+lame.xcframework.zip
