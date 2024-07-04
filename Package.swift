@@ -1,4 +1,4 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.5
 import PackageDescription
 
 let package = Package(
@@ -7,7 +7,7 @@ let package = Package(
         .iOS(.v12),
         .tvOS(.v12),
         .macOS(.v10_14),
-        .macCatalyst(.v10_14)
+        .macCatalyst(.v14)
     ],
     products: [
         .library(name: "lame", targets: ["lame"]),
@@ -17,7 +17,7 @@ let package = Package(
         .binaryTarget(
             name: "lame",
             url: "https://github.com/pro100andrey/lame/releases/download/1.2.1/lame.xcframework.zip",
-            checksum: "ed0d0249e1b3476de437090e933c56af1d849d2957e0415b54c7b7173a841228"
+            checksum: "1c5913e616f1a56b2ff9b54fcde2de83e52f7caf90ec4f2e77b7ec4a4aee63d0"
         )
     ]
 )
