@@ -19,6 +19,17 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
+### Swift Package Manager
+
+Swift Package Manager
+
+Through Xcode menu:
+
+1. File -> Swift Packages -> Add Package Dependency...
+2. Enter URL `https://github.com/pro100andrey/lame`
+
+### CocoaPods
+
 lame.framework is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
