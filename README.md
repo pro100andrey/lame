@@ -21,8 +21,6 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ### Swift Package Manager
 
-Swift Package Manager
-
 Through Xcode menu:
 
 1. File -> Swift Packages -> Add Package Dependency...
