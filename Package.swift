@@ -10,14 +10,15 @@ let package = Package(
         .macCatalyst(.v14)
     ],
     products: [
-        .library(name: "lame", targets: ["lame"]),
+        .library(name: "lame", type: .dynamic, targets: ["lame"]),
     ],
     dependencies: [],
     targets: [
         .binaryTarget(
             name: "lame",
-            url: "https://github.com/pro100andrey/lame/releases/download/1.2.1/lame.xcframework.zip",
-            checksum: "2f19066c37560dd095087229afa30f33f3d54276388547e8f6b2aacca3157b3d"
+
+            url: "https://github.com/pro100andrey/lame/releases/download/1.2.2/lame.xcframework.zip",
+            checksum: "e5ec7cadf25819feac39f5c249252969f7e28e592ea0568993791ec6f7c62c5d"
         )
     ]
 )
