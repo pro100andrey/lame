@@ -10,10 +10,13 @@ fi
 NEW_VERSION=$1
 FRAMEWORK_NAME=$2
 
+
+
 # 2. Calculate checksum and store it
 if [ ! -f "$FRAMEWORK_NAME.xcframework.zip" ]; then
-    echo "File not found at path: $FRAMEWORK_NAME.xcframework.zip"
-    exit 1
+    ## create zip
+    echo "Create zip file"
+    zip -r "$FRAMEWORK_NAME.xcframework.zip" "$FRAMEWORK_NAME.xcframework"
 fi
 
 echo "Calculate new checksum"

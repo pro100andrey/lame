@@ -21,7 +21,7 @@ let package = Package(
             name: "lame",
 
             url: "https://github.com/pro100andrey/lame/releases/download/1.2.2/lame.xcframework.zip",
-            checksum: "c9f913ec1487d78d3ee59ff7e965d1d50f8ff5c729b7f8c83da6a5f64214e63a"
+            checksum: "622e43b1386f266af4a481aa197d2a5e4572849bbab0119d84608d672063c6a5"
         )
     ]
 )
