@@ -1,16 +1,19 @@
-// swift-tools-version:5.5
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "lame",
     platforms: [
         .iOS(.v12),
+        .macCatalyst(.v13),
+        .macOS(.v10_13),
         .tvOS(.v12),
-        .macOS(.v10_14),
-        .macCatalyst(.v14)
     ],
-    products: [
-        .library(name: "lame", type: .dynamic, targets: ["lame"]),
+      products: [
+        .library(
+            name: "lame",
+            targets: ["lame"]
+        ),
     ],
     dependencies: [],
     targets: [
@@ -18,7 +21,7 @@ let package = Package(
             name: "lame",
 
             url: "https://github.com/pro100andrey/lame/releases/download/1.2.2/lame.xcframework.zip",
-            checksum: "54009fe84ea7dce3a8ed89277db6087b6639d3756fc52b2b3ff04cbf82f4b428"
+            checksum: "c9f913ec1487d78d3ee59ff7e965d1d50f8ff5c729b7f8c83da6a5f64214e63a"
         )
     ]
 )
