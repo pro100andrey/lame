@@ -63,7 +63,7 @@ download_lame() {
 
 	if ! [ -f $LAME_FILE ]; then
 		echo "downloading $LAME_FILE ..."
-		curl -o $LAME_FILE https://netix.dl.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz?viasf=1
+		curl -o $LAME_FILE https://altushost-swe.dl.sourceforge.net/project/lame/lame/3.100/lame-3.100.tar.gz?viasf=1
 		if [ $? != 0 ]; then
 			echo "downloading $LAME_FILE error ..."
 			exit -1
@@ -127,6 +127,12 @@ compile_mac_catalyst() {
 	cd $cwd
 }
 
+
+
+minVersionIos="13.0.0"
+minVersionTvOS="13.0.0"
+minVersionMacOS="10.13.0"
+
 # Generic compile function
 # $1-arch $2-host $3- platform
 compile() {
@@ -142,15 +148,15 @@ compile() {
 	deployment_target=""
 
 	if [ $platform == "iPhoneOS" ]; then
-		deployment_target="13.0.0"
+		deployment_target=$minVersionIos
 	elif [ $platform == "iPhoneSimulator" ]; then
-		deployment_target="13.0.0"
+		deployment_target=$minVersionIos
 	elif [ $platform == "AppleTVOS" ]; then
-		deployment_target="13.0.0"
+		deployment_target=$minVersionTvOS
 	elif [ $platform == "AppleTVSimulator" ]; then
-		deployment_target="13.0.0"
+		deployment_target=$minVersionTvOS
 	elif [ $platform == "MacOSX" ]; then
-		deployment_target="10.13.0"
+		deployment_target=$minVersionMacOS
 	else
 		min_os_version=""
 	fi
@@ -226,6 +232,7 @@ make_universal_libs_for_archs() {
 # Make framework function
 make_framework() {
 	local name=$1 # Framework name
+	local min_os_version=$2 # Minimum OS version
 	local framework="$name/lame.framework" # Framework directory
 
 	# Remove existing framework
@@ -260,6 +267,8 @@ make_framework() {
     <string>lame</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
+	<key>MinimumOSVersion</key>
+    <string>$min_os_version</string>
 </dict>
 </plist>
 EOF
@@ -315,7 +324,7 @@ make_ios_simulator_framework() {
 	make_universal_libs_for_archs "arm64 x86_64"
 
 	# Create the framework
-	make_framework $name
+	make_framework $name $minVersionIos
 }
 
 # Build tvOS Simulator framework
@@ -330,7 +339,7 @@ make_tvos_simulator_framework() {
 	make_universal_libs_for_archs "arm64 x86_64"
 
 	# Create the framework
-	make_framework $name
+	make_framework $name $minVersionTvOS
 }
 
 # Build tvOS framework
@@ -344,7 +353,7 @@ make_tvos_framework() {
 	make_universal_libs_for_archs arm64
 
 	# Create the framework
-	make_framework $name
+	make_framework $name $minVersionTvOS
 }
 
 # Build iOS framework
@@ -358,7 +367,7 @@ make_ios_framework() {
 	make_universal_libs_for_archs arm64
 
 	# Create the framework
-	make_framework $name
+	make_framework $name $minVersionIos
 }
 
 # Build macOS framework
@@ -373,7 +382,7 @@ make_macos_framework() {
 	make_universal_libs_for_archs "arm64 x86_64"
 
 	# Create the framework
-	make_framework $name
+	make_framework $name $minVersionMacOS
 }
 
 # Build Mac Catalyst framework
@@ -388,7 +397,7 @@ make_maccatalist_framework() {
 	make_universal_libs_for_archs "arm64 x86_64"
 
 	# Create the framework
-	make_framework $name
+	make_framework $name $minVersionMacOS
 }
 
 # Build all frameworks

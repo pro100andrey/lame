@@ -14,5 +14,7 @@
     <string>lame</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
+	<key>MinimumOSVersion</key>
+    <string>13.0.0</string>
 </dict>
 </plist>
