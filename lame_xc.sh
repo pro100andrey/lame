@@ -1,5 +1,10 @@
 #!/bin/bash
 
+minVersionIos="13.0.0"
+minVersionTvOS="13.0.0"
+minVersionMacOS="10.13.0"
+bundleVersion="1.2.4"
+
 # Function for logging info with a timestamp
 log() {
 	local message="$1" # Message to be logged
@@ -129,9 +134,7 @@ compile_mac_catalyst() {
 
 
 
-minVersionIos="13.0.0"
-minVersionTvOS="13.0.0"
-minVersionMacOS="10.13.0"
+
 
 # Generic compile function
 # $1-arch $2-host $3- platform
@@ -260,7 +263,9 @@ make_framework() {
     <key>CFBundleName</key>
     <string>lame</string>
     <key>CFBundleVersion</key>
-    <string>1.0</string>
+    <string>$bundleVersion</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$bundleVersion</string>
     <key>CFBundlePackageType</key>
     <string>FMWK</string>
     <key>CFBundleExecutable</key>
