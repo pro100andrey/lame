@@ -20,8 +20,8 @@ let package = Package(
         .binaryTarget(
             name: "lame",
 
-            url: "https://github.com/pro100andrey/lame/releases/download/1.2.5/lame.xcframework.zip",
-            checksum: "56717d3ece5424fbe3929251d75fa362047208226b3c00b38b6cdaab4260100c"
+            url: "https://github.com/pro100andrey/lame/releases/download/1.2.6/lame.xcframework.zip",
+            checksum: "271c9ff7ab80e4b3a9b20b54a85c9b996a775ba2649985a0627b150bdd567763"
         )
     ]
 )

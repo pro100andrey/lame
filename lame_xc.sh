@@ -3,7 +3,7 @@
 minVersionIos="12.0"
 minVersionTvOS="12.0"
 minVersionMacOS="10.14"
-bundleVersion="1.2.5"
+bundleVersion="1.2.6"
 
 # Function for logging info with a timestamp
 log() {
@@ -273,7 +273,7 @@ make_framework() {
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
 	<key>MinimumOSVersion</key>
-    <string>$min_os_version</string>
+    <string>100.0</string>
 </dict>
 </plist>
 EOF
