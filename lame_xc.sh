@@ -1,9 +1,9 @@
 #!/bin/bash
 
-minVersionIos="13.0.0"
-minVersionTvOS="13.0.0"
-minVersionMacOS="10.13.0"
-bundleVersion="1.2.4"
+minVersionIos="12.0"
+minVersionTvOS="12.0"
+minVersionMacOS="10.14"
+bundleVersion="1.2.5"
 
 # Function for logging info with a timestamp
 log() {
