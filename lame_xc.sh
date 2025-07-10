@@ -132,10 +132,6 @@ compile_mac_catalyst() {
 	cd $cwd
 }
 
-
-
-
-
 # Generic compile function
 # $1-arch $2-host $3- platform
 compile() {
